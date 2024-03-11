@@ -118,3 +118,11 @@ select sum(relase_years) from albums
 select band_id, count(band_id) from albums
 group by band_id;
  
+
+const Sequelize=require(sequelize);
+const sequelize = new Sequelize('node-complete', 'root', 'nodecomplete',{
+    dialect: 'mysql',
+    host: 'localhost'
+});
+
+module.exports=sequelize;
